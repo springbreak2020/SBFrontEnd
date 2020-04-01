@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.decorative-div {
+  width: 100%;
+  height: 400px;
+  background-color: blue;
+  transform: skewY(20deg);
+  overflow: hidden;
+  position: absolute;
+  top: -100px;
+}
+
+.decorative-div h1 {
+  z-index: 2;
+  position: relative;
+  font-size: 24px;
+  padding: 5%;
+  margin-top: 15%;
+}
