@@ -47,10 +47,31 @@
   top: -100px;
 }
 
-.decorative-div h1 {
+@media only screen and (min-width: 500px) {
+  .decorative-div {
+    height: 510px;
+    top: -140px;
+  }
+}
+
+h1 {
   z-index: 2;
   position: relative;
   font-size: 24px;
   padding: 5%;
   margin-top: 15%;
+  text-align: center;
+}
+
+.login-body {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+div {
+  max-width: 700px;
+  margin: 0 auto;
 }
