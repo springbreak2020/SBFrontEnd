@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@unicef/material-ui-currency-textfield": "^0.8.6"
+  }
+}
