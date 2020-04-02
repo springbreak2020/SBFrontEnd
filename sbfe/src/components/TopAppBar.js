@@ -1,4 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import MenuExpansion from "./MenuExpansion";
+
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -19,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2)
   },
   title: {
-    flexGrow: 1,
+    flexGrow: 1
   }
 }));
 
@@ -53,9 +57,12 @@ export default function TopAppBar() {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem onClick={handleClose}>
+                <MenuExpansion />
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link to="./budgets">Budgets</Link>
+              </MenuItem>
             </Menu>
             <MenuIcon />
           </IconButton>
