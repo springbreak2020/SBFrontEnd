@@ -9,6 +9,9 @@ import { Budgets } from "../Budgets";
 import { SavingsAdd } from "../SavingsAdd";
 import { SavingsEditDelete } from "../SavingsEditDelete"; 
 import { DebtAdd } from "../DebtAdd";
+import { DebtEditDelete } from "../DebtEditDelete";
+import { NotesAdd } from "../NotesAdd";
+import { NotesEditDelete } from "../NotesEditDelete";
 
 export const Routes = () => {
   return (
@@ -22,6 +25,9 @@ export const Routes = () => {
       <Route path="/SavingsAdd" component={SavingsAdd} />
       <Route path="/SavingsEditDelete" component={SavingsEditDelete} />
       <Route path="/DebtAdd" component={DebtAdd} />
+      <Route path="/DebtEditDelete" component={DebtEditDelete} />
+      <Route path="/NotesAdd" component={NotesAdd} />
+      <Route path="/NotesEditDelete" component={NotesEditDelete} />
     </>
   );
 };
