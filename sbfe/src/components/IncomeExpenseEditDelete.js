@@ -22,8 +22,7 @@ export const IncomeExpenseEditDelete = () => {
     <div>
       <div>
         <h1>
-          Fill out this form to add any income you make for the month, and
-          subract any money you spend in the month.
+          Use this form to edit or delete any previous entries you made.
         </h1>
         <TextField
           id="filled-basic"

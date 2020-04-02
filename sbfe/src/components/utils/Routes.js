@@ -6,7 +6,8 @@ import { Login } from "../Login";
 import { IncomeExpenseAdd } from "../IncomeExpenseAdd";
 import { IncomeExpenseEditDelete } from "../IncomeExpenseEditDelete";
 import { Budgets } from "../Budgets";
-import { Savings } from "../Savings";
+import { SavingsAdd } from "../SavingsAdd";
+import { SavingsEditDelete } from "../SavingsEditDelete"; 
 
 export const Routes = () => {
   return (
@@ -17,7 +18,8 @@ export const Routes = () => {
       <Route path="/IncomeExpenseAdd" component={IncomeExpenseAdd} />
       <Route path="/IncomeExpenseEditDelete" component={IncomeExpenseEditDelete} />
       <Route path="/Budgets" component={Budgets} />
-      <Route path="/Savings" component={Savings} />
+      <Route path="/SavingsAdd" component={SavingsAdd} />
+      <Route path="/SavingsEditDelete" component={SavingsEditDelete} />
     </>
   );
 };
