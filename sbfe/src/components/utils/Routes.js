@@ -4,14 +4,16 @@ import { Route } from "react-router-dom";
 import { Notes } from "../Notes";
 import { Login } from "../Login";
 import { IncomeExpenseAdd } from "../IncomeExpenseAdd";
+import { IncomeExpenseEditDelete } from "../IncomeExpenseEditDelete;"
 
 export const Routes = () => {
   return (
     <>
       {/* <Route exact path="/" component={Home} /> */}
-      <Route exact path= "/" component={Login} /> 
-      <Route path= "/notes" component={Notes} /> 
-      <Route path= "/IncomeExpenseAdd" component={IncomeExpenseAdd} />
+      <Route exact path="/" component={Login} />
+      <Route path="/notes" component={Notes} />
+      <Route path="/IncomeExpenseAdd" component={IncomeExpenseAdd} />
+      <Route path="/IncomeExpenseEditDelete" component={IncomeExpenseEditDelete} />
     </>
   );
 };
