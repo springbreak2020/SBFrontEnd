@@ -77,19 +77,23 @@ div {
 }
 
 .MuiToolbar-regular {
-    min-height: 56px;
-    width: 100%;
-    display: flex;
+  min-height: 56px;
+  width: 100%;
+  display: flex;
 }
 
 h6 {
   text-align: center;
 }
 
-.none {
-  display: none;
+.MuiListItemText-multiline {
+    text-align: center;
 }
 
-.display {
-  display: flex;
+.MuiSvgIcon-fontSizeLarge {
+    position: absolute;
+}
+
+nav {
+  background-color: blue;
 }
