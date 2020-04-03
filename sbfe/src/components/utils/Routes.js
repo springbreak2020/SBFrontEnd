@@ -1,18 +1,22 @@
 import React from "react";
 import { Route } from "react-router-dom";
 // import { Home } from "../Notes";
-import { Notes } from "../Notes";
-import { Login } from "../Login";
-import { IncomeExpenseAdd } from "../IncomeExpenseAdd";
-import { IncomeExpenseEditDelete } from "../IncomeExpenseEditDelete";
-import { Budgets } from "../Budgets";
-import { SavingsAdd } from "../SavingsAdd";
-import { SavingsEditDelete } from "../SavingsEditDelete"; 
-import { DebtAdd } from "../DebtAdd";
-import { DebtEditDelete } from "../DebtEditDelete";
-import { NotesAdd } from "../NotesAdd";
-import { NotesEditDelete } from "../NotesEditDelete";
-import { Dashboard } from "../Dashboard";
+import { Notes } from "../notes/NotesCard";
+import { Login } from "../login/Login";
+import { IncomeExpenseAdd } from "../incomeExpense/IncomeExpenseAdd";
+import { IncomeExpenseEditDelete } from "../incomeExpense/IncomeExpenseEditDelete";
+import { Budgets } from "../budgets/Budgets";
+import { SavingsAdd } from "../savings/SavingsAdd";
+import { SavingsEditDelete } from "../savings/SavingsEditDelete"; 
+import { DebtAdd } from "../debt/DebtAdd";
+import { DebtEditDelete } from "../debt/DebtEditDelete";
+import { NotesAdd } from "../notes/NotesAdd";
+import { NotesEditDelete } from "../notes/NotesEditDelete";
+import { Dashboard } from "../dashboard/Dashboard";
+import { IncomeExpenseCard } from "../incomeExpense/IncomeExpenseCard";
+import { DebtCard } from "../debt/DebtCard";
+import { SavingsCard } from "../savings/SavingsCard";
+import { NotesCard } from "../notes/NotesCard";
 
 export const Routes = () => {
   return (
@@ -29,6 +33,10 @@ export const Routes = () => {
       <Route path="/DebtEditDelete" component={DebtEditDelete} />
       <Route path="/NotesAdd" component={NotesAdd} />
       <Route path="/NotesEditDelete" component={NotesEditDelete} />
+      <Route path="/IncomeExpenseCard" component={IncomeExpenseCard} />
+      <Route path="/DebtCard" component={DebtCard} />
+      <Route path="/SavingsCard" component={SavingsCard} />
+      <Route path="/NotesCard" component={NotesCard} />
     </>
   );
 };
