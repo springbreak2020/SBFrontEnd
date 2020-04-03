@@ -12,12 +12,14 @@ import { DebtAdd } from "../Debt/DebtAdd";
 import { DebtEditDelete } from "../Debt/DebtEditDelete";
 import { NotesAdd } from "../Notes/NotesAdd";
 import { NotesEditDelete } from "../Notes/NotesEditDelete";
+import { Dashboard } from "../Dashboard/Dashboard";
 
 export const Routes = () => {
   return (
     <>
       {/* <Route exact path="/" component={Home} /> */}
       <Route exact path="/" component={Login} />
+      <Route path="/dashboard" component={Dashboard} />
       <Route path="/notes" component={Notes} />
       <Route path="/IncomeExpenseAdd" component={IncomeExpenseAdd} />
       <Route

@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { Header } from "../Header/Header";
 
-export const Login = () => {
+export const Login = props => {
+  const [login, setLogin] = useState();
+  const toDashboard = () => {
+    props.history.push("/dashboard");
+  };
+
+  useEffect(() => {
+    setLogin(localStorage.getItem("token"));
+  }, [localStorage.getItem("token")]);
+
+  if (login === "true") {
+    toDashboard();
+  }
+
+  console.log("Login", login);
+  console.log("Props", props);
+
   return (
     <>
       <Header />

@@ -3,6 +3,9 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
+  const createToken = () => {
+    localStorage.setItem("token", "true");
+  };
   return (
     <div>
       <div className="links">
@@ -21,7 +24,11 @@ export const Header = () => {
         <Link className="savings" to="/savingsadd">
           Savings
         </Link>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div
+          class="g-signin2"
+          data-onsuccess="onSignIn"
+          onClick={createToken}
+        ></div>
       </div>
     </div>
   );
