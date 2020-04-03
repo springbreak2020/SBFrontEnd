@@ -21,9 +21,7 @@ export const IncomeExpenseEditDelete = () => {
   return (
     <div>
       <div>
-        <h1>
-          Use this form to edit or delete any previous entries you made.
-        </h1>
+        <h1>Use this form to edit or delete any previous entries you made.</h1>
         <TextField
           id="filled-basic"
           label="Type of Income/Expense ie. Pay Check or Rent"
