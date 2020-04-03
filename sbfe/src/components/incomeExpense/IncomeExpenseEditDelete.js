@@ -1,5 +1,4 @@
 import React from "react";
-
 import TextField from "@material-ui/core/TextField";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -21,9 +20,7 @@ export const IncomeExpenseEditDelete = () => {
   return (
     <div>
       <div>
-        <h1>
-          Use this form to edit or delete any previous entries you made.
-        </h1>
+        <h1>Use this form to edit or delete any previous entries you made.</h1>
         <TextField
           id="filled-basic"
           label="Type of Income/Expense ie. Pay Check or Rent"

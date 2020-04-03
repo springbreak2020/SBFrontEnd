@@ -1,13 +1,12 @@
 import React from "react";
+import Sidebar from "../sidebar/Sidebar";
 
-// import TopAppBar from "./TopAppBar";
-
-import "../App.css";
+import "./dashboard.css";
 
 export const Dashboard = () => {
   return (
-      <div>
-        {/* <TopAppBar /> */}
-      </div>
-  )
+    <div className="dashboard">
+      <Sidebar />
+    </div>
+  );
 };
