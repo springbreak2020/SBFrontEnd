@@ -1,0 +1,24 @@
+.links {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  width: 90%;
+  border-bottom: 2px solid #757e7d;
+}
+
+.links a {
+  color: black !important;
+  text-decoration: none !important;
+  font-size: 1.5rem;
+}
+
+.links a:visited {
+  color: black !important;
+}
+
+.links a:hover {
+  font-size: 1.6rem;
+  transition: 0.3s ease-in-out all;
+}

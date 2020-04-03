@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./Login.css";
-import { Header } from "../Header/Header";
+import "./login.css";
+import { Header } from "../header/Header";
 
 export const Login = (props) => {
   const [login, setLogin] = useState();

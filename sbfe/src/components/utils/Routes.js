@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 // import { Home } from "../Notes";
-import { Notes } from "../notes/NotesCard";
+// import { Notes } from "../notes/NotesCard";
 import { Login } from "../login/Login";
 import { IncomeExpenseAdd } from "../incomeExpense/IncomeExpenseAdd";
 import { IncomeExpenseEditDelete } from "../incomeExpense/IncomeExpenseEditDelete";
@@ -12,7 +12,7 @@ import { DebtAdd } from "../debt/DebtAdd";
 import { DebtEditDelete } from "../debt/DebtEditDelete";
 import { NotesAdd } from "../notes/NotesAdd";
 import { NotesEditDelete } from "../notes/NotesEditDelete";
-import { Dashboard } from "../dashboard/Dashboard";
+// import { Dashboard } from "../dashboard/Dashboard";
 import { IncomeExpenseCard } from "../incomeExpense/IncomeExpenseCard";
 import { DebtCard } from "../debt/DebtCard";
 import { SavingsCard } from "../savings/SavingsCard";
@@ -21,9 +21,9 @@ import { NotesCard } from "../notes/NotesCard";
 export const Routes = () => {
   return (
     <>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/Login" component={Login} />
-      <Route path="/notes" component={Notes} />
+      <Route exact path="/" component={Login} />
+      <Route path="/Dashboard" component={NotesCard} />
+      {/* <Route path="/notes" component={Notes} /> */}
       <Route path="/IncomeExpenseAdd" component={IncomeExpenseAdd} />
       <Route path="/IncomeExpenseEditDelete" component={IncomeExpenseEditDelete} />
       <Route path="/Budgets" component={Budgets} />

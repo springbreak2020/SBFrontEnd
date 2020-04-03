@@ -8,7 +8,7 @@ import FormControl from "@material-ui/core/FormControl";
 import CurrencyTextField from "@unicef/material-ui-currency-textfield";
 import Button from "@material-ui/core/Button";
 
-import "../App.css";
+import "./income-expense.css";
 
 export const IncomeExpenseEditDelete = () => {
   const [type, setType] = React.useState("");

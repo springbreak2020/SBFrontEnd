@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../App.css";
+import "./income-expense.css";
 
 export const IncomeExpenseCard = () => {
   return (
