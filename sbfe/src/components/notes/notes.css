@@ -1,0 +1,19 @@
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.note-body {
+  margin: 10px auto;
+  max-width: 325px;
+  width: 100%;
+}
+
+.note-edit-body {
+  display: flex;
+}
+
+.MuiInputLabel-filled {
+    text-align: center;
+    width: 90%;
+}
