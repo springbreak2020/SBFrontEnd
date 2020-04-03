@@ -6,12 +6,18 @@ export const Login = () => {
   return (
     <>
       <Header />
-      <div className="login-body">
-        <div className="decorative-div"></div>
-        <h1>
-          Welcome to Basic Budget Tracker. Please log in or sign up to continue.{" "}
-        </h1>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <div className="login">
+        <div className="flex">
+          <div className="sideone">
+            <h1>Effectively </h1>
+            <h1>manage your</h1>
+            <h1>budget</h1>
+            <p>The app gives you the power to manage budget.</p>
+          </div>
+          <div className="sidetwo">
+            <img src="https://i.imgur.com/B29pXMf.png" alt="Managing Budget" />
+          </div>
+        </div>
       </div>
     </>
   );
