@@ -1,17 +1,17 @@
 import React from "react";
 import { Route } from "react-router-dom";
 // import { Home } from "../Notes";
-import { Notes } from "../Notes";
-import { Login } from "../Login";
-import { IncomeExpenseAdd } from "../IncomeExpenseAdd";
-import { IncomeExpenseEditDelete } from "../IncomeExpenseEditDelete";
-import { Budgets } from "../Budgets";
-import { SavingsAdd } from "../SavingsAdd";
-import { SavingsEditDelete } from "../SavingsEditDelete"; 
-import { DebtAdd } from "../DebtAdd";
-import { DebtEditDelete } from "../DebtEditDelete";
-import { NotesAdd } from "../NotesAdd";
-import { NotesEditDelete } from "../NotesEditDelete";
+import { Notes } from "../Notes/Notes";
+import { Login } from "../Login/Login";
+import { IncomeExpenseAdd } from "../IncomeExpense/IncomeExpenseAdd";
+import { IncomeExpenseEditDelete } from "../IncomeExpense/IncomeExpenseEditDelete";
+import { Budgets } from "../Budgets/Budgets";
+import { SavingsAdd } from "../Savings/SavingsAdd";
+import { SavingsEditDelete } from "../Savings/SavingsEditDelete";
+import { DebtAdd } from "../Debt/DebtAdd";
+import { DebtEditDelete } from "../Debt/DebtEditDelete";
+import { NotesAdd } from "../Notes/NotesAdd";
+import { NotesEditDelete } from "../Notes/NotesEditDelete";
 
 export const Routes = () => {
   return (
@@ -20,7 +20,10 @@ export const Routes = () => {
       <Route exact path="/" component={Login} />
       <Route path="/notes" component={Notes} />
       <Route path="/IncomeExpenseAdd" component={IncomeExpenseAdd} />
-      <Route path="/IncomeExpenseEditDelete" component={IncomeExpenseEditDelete} />
+      <Route
+        path="/IncomeExpenseEditDelete"
+        component={IncomeExpenseEditDelete}
+      />
       <Route path="/Budgets" component={Budgets} />
       <Route path="/SavingsAdd" component={SavingsAdd} />
       <Route path="/SavingsEditDelete" component={SavingsEditDelete} />

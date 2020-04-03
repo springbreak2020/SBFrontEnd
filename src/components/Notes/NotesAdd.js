@@ -1,14 +1,14 @@
 import React from "react";
-
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import "./NotesAdd.css";
 
-export const NotesEditDelete = () => {
+export const NotesAdd = () => {
   return (
     <div>
       <h1>
-        Do you need to edit or delete any notes you left for yourself regarding
-        your finances?
+        Do you have any notes you'd like to leave for yourself regarding your
+        finances? (Ie. The phone bill is due on ** day of the month.)
       </h1>
       <TextField
         id="filled-basic"
@@ -20,10 +20,10 @@ export const NotesEditDelete = () => {
       />
       <div>
         <Button variant="contained" color="primary">
-          Edit
+          Add Another Entry
         </Button>
         <Button variant="contained" color="secondary">
-          Delete
+          Done
         </Button>
       </div>
     </div>

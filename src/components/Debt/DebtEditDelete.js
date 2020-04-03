@@ -1,9 +1,9 @@
 import React from "react";
-
 import TextField from "@material-ui/core/TextField";
 import CurrencyTextField from "@unicef/material-ui-currency-textfield";
 import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
+import "./DebtEditDelete.css";
 
 export const DebtEditDelete = () => {
   const [value, setValue] = React.useState(0.0);
@@ -11,7 +11,8 @@ export const DebtEditDelete = () => {
   return (
     <div>
       <h1>
-        Have you payed off some or all of a debt? Use this form to edit or delete your previous entries.
+        Have you payed off some or all of a debt? Use this form to edit or
+        delete your previous entries.
       </h1>
       <TextField
         id="filled-basic"

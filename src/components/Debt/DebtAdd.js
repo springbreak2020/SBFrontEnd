@@ -1,9 +1,9 @@
 import React from "react";
-
 import TextField from "@material-ui/core/TextField";
 import CurrencyTextField from "@unicef/material-ui-currency-textfield";
 import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
+import "./DebtAdd.css";
 
 export const DebtAdd = () => {
   const [value, setValue] = React.useState(0.0);
@@ -11,7 +11,9 @@ export const DebtAdd = () => {
   return (
     <div>
       <h1>
-        Do you have any outstanding debts you'd like to keep track of? As you pay off your debt, you can edit this form later to reflect the new balance.
+        Do you have any outstanding debts you'd like to keep track of? As you
+        pay off your debt, you can edit this form later to reflect the new
+        balance.
       </h1>
       <TextField
         id="filled-basic"
