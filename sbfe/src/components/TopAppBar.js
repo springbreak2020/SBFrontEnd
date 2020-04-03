@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import MenuExpansion from "./MenuExpansion";
@@ -30,6 +30,7 @@ const useStyles = makeStyles(theme => ({
 export default function TopAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [menuActive, setMenuState] = useState(false);
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
@@ -56,12 +57,18 @@ export default function TopAppBar() {
               keepMounted
               open={Boolean(anchorEl)}
               onClose={handleClose}
+            //   className={` ${
+            //     menuActive ? "none" : "display"
+            //   }`}
+            //   onClick={() => setMenuState(!menuActive)}
             >
               <MenuItem onClick={handleClose}>
                 <MenuExpansion />
               </MenuItem>
               <MenuItem onClick={handleClose}>
-                <Link to="./budgets">Budgets</Link>
+                <Link to="./budgets" onClick={handleClose}>
+                  Budgets
+                </Link>
               </MenuItem>
             </Menu>
             <MenuIcon />

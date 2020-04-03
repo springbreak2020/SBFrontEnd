@@ -85,3 +85,11 @@ div {
 h6 {
   text-align: center;
 }
+
+.none {
+  display: none;
+}
+
+.display {
+  display: flex;
+}
