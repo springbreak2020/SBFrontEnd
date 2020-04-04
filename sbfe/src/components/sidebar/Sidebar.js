@@ -8,16 +8,16 @@ const Sidebar = props => {
     props.history.push("/budgets");
   };
   const toDebt = () => {
-    props.history.push("/debtadd");
+    props.history.push("/debtcard");
   };
   const toIncome = () => {
-    props.history.push("/incomeexpenseadd");
+    props.history.push("/incomeexpensecard");
   };
   const toNotes = () => {
-    props.history.push("/notesadd");
+    props.history.push("/notescard");
   };
   const toSavings = () => {
-    props.history.push("/savingsadd");
+    props.history.push("/savingscard");
   };
   const Logout = () => {
     localStorage.setItem("token", "false");
