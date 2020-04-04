@@ -45,7 +45,8 @@ export const DebtEditDelete = (props) => {
         <Card className={classes.root} variant="outlined">
           <TextField
             id="filled-basic"
-            label="Type of Debt?"
+            label="Type of debt?"
+            helperText={"Required*"}
             variant="filled"
             fullWidth
             margin="normal"
