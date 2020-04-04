@@ -156,3 +156,67 @@ export const getNotes = (user) => (dispatch) => {
       });
     });
 };
+
+// Create
+const createIncome = (data) => (dispatch) => {
+  dispatch({ type: ADD_INCOME_START });
+  airtableAuth()
+    .post(
+      `https://api.airtable.com/v0/appcaKbHDurIj9YWs/Income%20%26%20Expenses`,
+      data
+    )
+    .then((res) => {
+      dispatch({ type: ADD_INCOME_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch({ type: ADD_INCOME_FAILURE });
+    });
+};
+
+const createBudget = (data) => (dispatch) => {
+  dispatch({ type: ADD_BUDGET_START });
+  airtableAuth()
+    .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Budgets`, data)
+    .then((res) => {
+      dispatch({ type: ADD_BUDGET_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch({ type: ADD_BUDGET_FAILURE });
+    });
+};
+
+const createSavings = (data) => (dispatch) => {
+  dispatch({ type: ADD_SAVINGS_START });
+  airtableAuth()
+    .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Savings`, data)
+    .then((res) => {
+      dispatch({ type: ADD_SAVINGS_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch({ type: ADD_SAVINGS_FAILURE });
+    });
+};
+
+const createDebt = (data) => (dispatch) => {
+  dispatch({ type: ADD_DEBT_START });
+  airtableAuth()
+    .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Debt`, data)
+    .then((res) => {
+      dispatch({ type: ADD_DEBT_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch({ type: ADD_DEBT_FAILURE });
+    });
+};
+
+const createNotes = (data) => (dispatch) => {
+  dispatch({ type: ADD_NOTES_START });
+  airtableAuth()
+    .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Notes`, data)
+    .then((res) => {
+      dispatch({ type: ADD_NOTES_SUCCESS });
+    })
+    .catch((err) => {
+      dispatch({ type: ADD_NOTES_FAILURE });
+    });
+};
