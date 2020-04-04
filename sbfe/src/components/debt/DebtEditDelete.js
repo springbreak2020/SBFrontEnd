@@ -50,6 +50,7 @@ export const DebtEditDelete = (props) => {
             fullWidth
             margin="normal"
             className={classes.text}
+            onChange={(e, value) => setValue(value)}
           />
           <FormControl fullWidth>
             <CurrencyTextField
@@ -69,16 +70,21 @@ export const DebtEditDelete = (props) => {
           </FormControl>
           <TextField
             id="filled-basic"
-            label="Any thoughts you'd like to record about this entry?"
+            label="Any notes you'd like to record?"
             variant="filled"
             fullWidth
             multiline
             margin="normal"
             className={classes.text}
+            onChange={(e, value) => setValue(value)}
           />
           <CardActions className={classes.root}>
-            <Button size="medium" onClick={toDebt}>Save</Button>
-            <Button size="medium" onClick={toDebt}>Cancel</Button>
+            <Button size="medium" onClick={toDebt}>
+              Save
+            </Button>
+            <Button size="medium" onClick={toDebt}>
+              Cancel
+            </Button>
           </CardActions>
         </Card>
         <BottomBar />
