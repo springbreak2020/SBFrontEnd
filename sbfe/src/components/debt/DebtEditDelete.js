@@ -1,4 +1,8 @@
 import React from "react";
+
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
 import TextField from "@material-ui/core/TextField";
 import CurrencyTextField from "@unicef/material-ui-currency-textfield";
 import FormControl from "@material-ui/core/FormControl";
@@ -6,52 +10,78 @@ import Button from "@material-ui/core/Button";
 
 import "./debt.css";
 
-export const DebtEditDelete = () => {
+import Sidebar from "../sidebar/Sidebar";
+import TopBar from "../topbar/TopBar";
+import BottomBar from "../bottombar/BottomBar";
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+    margin: "10px auto",
+    height: "fit-content",
+    justifyContent: "center",
+    width: "90%",
+    maxWidth: "400px",
+  },
+  text: {
+    textAlign: "center",
+    margin: "10px auto",
+    width: "90%",
+    display: "flex",
+  },
+});
+export const DebtEditDelete = (props) => {
+  const classes = useStyles();
   const [value, setValue] = React.useState(0.0);
   const error = value < 0.01;
+  const toDebt = () => {
+    props.history.push("/debtcard");
+  };
   return (
-    <div>
-      <h1>
-        Have you payed off some or all of a debt? Use this form to edit or
-        delete your previous entries.
-      </h1>
-      <TextField
-        id="filled-basic"
-        label="Type of Debt?"
-        variant="filled"
-        fullWidth
-        margin="normal"
-      />
-      <FormControl fullWidth>
-        <CurrencyTextField
-          variant="filled"
-          label="Amount"
-          value={value}
-          currencySymbol="$"
-          maximumValue={"100000000000000000"}
-          autoFocus
-          onChange={(e, value) => setValue(value)}
-          error={error}
-          helperText={"minimum number is .01"}
-          decimalCharacter="."
-          digitGroupSeparator=","
-        />
-      </FormControl>
-      <TextField
-        id="filled-basic"
-        label="Any thoughts you'd like to record about this entry?"
-        variant="filled"
-        fullWidth
-        multiline
-        margin="normal"
-      />
-      <div>
-        <Button variant="contained" color="primary">
-          Edit
-        </Button>
-        <Button variant="contained" color="secondary">
-          Delete
-        </Button>
+    <div className="debt-card-body">
+      <Sidebar />
+      <div className="topbar-card-wrapper">
+        <TopBar />
+        <Card className={classes.root} variant="outlined">
+          <TextField
+            id="filled-basic"
+            label="Type of Debt?"
+            variant="filled"
+            fullWidth
+            margin="normal"
+            className={classes.text}
+          />
+          <FormControl fullWidth>
+            <CurrencyTextField
+              variant="filled"
+              label="Amount"
+              value={value}
+              currencySymbol="$"
+              maximumValue={"100000000000000000"}
+              autoFocus
+              onChange={(e, value) => setValue(value)}
+              error={error}
+              helperText={"minimum number is .01"}
+              decimalCharacter="."
+              digitGroupSeparator=","
+              className={classes.text}
+            />
+          </FormControl>
+          <TextField
+            id="filled-basic"
+            label="Any thoughts you'd like to record about this entry?"
+            variant="filled"
+            fullWidth
+            multiline
+            margin="normal"
+            className={classes.text}
+          />
+          <CardActions className={classes.root}>
+            <Button size="medium" onClick={toDebt}>Save</Button>
+            <Button size="medium" onClick={toDebt}>Cancel</Button>
+          </CardActions>
+        </Card>
+        <BottomBar />
       </div>
     </div>
   );
