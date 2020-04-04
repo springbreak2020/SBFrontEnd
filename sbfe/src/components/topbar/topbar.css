@@ -1,0 +1,13 @@
+.topbar {
+  width: 100%;
+  background: white;
+  display: flex;
+  position: sticky;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.topbar-text {
+  margin: 2%;
+  font-size: 1rem;
+}

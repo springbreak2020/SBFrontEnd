@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withRouter } from "react-router-dom";
 
-const Sidebar = props => {
+const Sidebar = (props) => {
   const toBudget = () => {
     props.history.push("/budgets");
   };

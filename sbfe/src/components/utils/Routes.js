@@ -12,6 +12,7 @@ import { DebtEditDelete } from "../debt/DebtEditDelete";
 import { NotesAdd } from "../notes/NotesAdd";
 import { NotesEditDelete } from "../notes/NotesEditDelete";
 import { Dashboard } from "../dashboard/Dashboard";
+import { DebtCard } from "../debt/DebtCard";
 
 export const Routes = () => {
   return (
@@ -32,6 +33,7 @@ export const Routes = () => {
       <Route path="/DebtEditDelete" component={DebtEditDelete} />
       <Route path="/NotesAdd" component={NotesAdd} />
       <Route path="/NotesEditDelete" component={NotesEditDelete} />
+      <Route path="/DebtCard" component={DebtCard} />
     </>
   );
 };
