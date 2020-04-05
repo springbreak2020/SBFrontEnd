@@ -158,7 +158,7 @@ export const getNotes = (user) => (dispatch) => {
 };
 
 // Create
-const createIncome = (data) => (dispatch) => {
+export const createIncome = (data) => (dispatch) => {
   dispatch({ type: ADD_INCOME_START });
   airtableAuth()
     .post(
@@ -169,11 +169,12 @@ const createIncome = (data) => (dispatch) => {
       dispatch({ type: ADD_INCOME_SUCCESS });
     })
     .catch((err) => {
+      console.log("createIncome ERR", err);
       dispatch({ type: ADD_INCOME_FAILURE });
     });
 };
 
-const createBudget = (data) => (dispatch) => {
+export const createBudget = (data) => (dispatch) => {
   dispatch({ type: ADD_BUDGET_START });
   airtableAuth()
     .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Budgets`, data)
@@ -181,11 +182,12 @@ const createBudget = (data) => (dispatch) => {
       dispatch({ type: ADD_BUDGET_SUCCESS });
     })
     .catch((err) => {
+      console.log("createBudget ERR", err);
       dispatch({ type: ADD_BUDGET_FAILURE });
     });
 };
 
-const createSavings = (data) => (dispatch) => {
+export const createSavings = (data) => (dispatch) => {
   dispatch({ type: ADD_SAVINGS_START });
   airtableAuth()
     .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Savings`, data)
@@ -193,11 +195,12 @@ const createSavings = (data) => (dispatch) => {
       dispatch({ type: ADD_SAVINGS_SUCCESS });
     })
     .catch((err) => {
+      console.log("createSavings ERR", err);
       dispatch({ type: ADD_SAVINGS_FAILURE });
     });
 };
 
-const createDebt = (data) => (dispatch) => {
+export const createDebt = (data) => (dispatch) => {
   dispatch({ type: ADD_DEBT_START });
   airtableAuth()
     .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Debt`, data)
@@ -205,11 +208,12 @@ const createDebt = (data) => (dispatch) => {
       dispatch({ type: ADD_DEBT_SUCCESS });
     })
     .catch((err) => {
+      console.log("createDebt ERR", err);
       dispatch({ type: ADD_DEBT_FAILURE });
     });
 };
 
-const createNotes = (data) => (dispatch) => {
+export const createNotes = (data) => (dispatch) => {
   dispatch({ type: ADD_NOTES_START });
   airtableAuth()
     .post(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Notes`, data)
@@ -217,6 +221,76 @@ const createNotes = (data) => (dispatch) => {
       dispatch({ type: ADD_NOTES_SUCCESS });
     })
     .catch((err) => {
+      console.log("createNotes ERR", err);
       dispatch({ type: ADD_NOTES_FAILURE });
+    });
+};
+
+// Update
+export const updateIncome = (data) => (dispatch) => {
+  dispatch({ type: UPDATE_INCOME_START });
+  airtableAuth()
+    .put(
+      `https://api.airtable.com/v0/appcaKbHDurIj9YWs/Income%20%26%20Expenses`,
+      data
+    )
+    .then((res) => {
+      dispatch({ type: UPDATE_INCOME_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("updateIncome ERR", err);
+      dispatch({ type: UPDATE_INCOME_FAILURE });
+    });
+};
+
+export const updateBudget = (data) => (dispatch) => {
+  dispatch({ type: UPDATE_BUDGET_START });
+  airtableAuth()
+    .put(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Budgets`, data)
+    .then((res) => {
+      dispatch({ type: UPDATE_BUDGET_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("updateBudget ERR", err);
+      dispatch({ type: UPDATE_BUDGET_FAILURE });
+    });
+};
+
+export const updateSavings = (data) => (dispatch) => {
+  dispatch({ type: UPDATE_SAVINGS_START });
+  airtableAuth()
+    .put(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Savings`, data)
+    .then((res) => {
+      dispatch({ type: UPDATE_SAVINGS_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("updateSavings ERR", err);
+      dispatch({ type: UPDATE_SAVINGS_FAILURE });
+    });
+};
+
+export const updateDebt = (data) => (dispatch) => {
+  dispatch({ type: UPDATE_DEBT_START });
+  airtableAuth()
+    .put(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Debt`, data)
+    .then((res) => {
+      dispatch({ type: UPDATE_DEBT_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("updateDebt ERR", err);
+      dispatch({ type: UPDATE_DEBT_FAILURE });
+    });
+};
+
+export const updateNotes = (data) => (dispatch) => {
+  dispatch({ type: UPDATE_NOTES_START });
+  airtableAuth()
+    .put(`https://api.airtable.com/v0/appcaKbHDurIj9YWs/Notes`, data)
+    .then((res) => {
+      dispatch({ type: UPDATE_NOTES_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("updateNotes ERR", err);
+      dispatch({ type: UPDATE_NOTES_FAILURE });
     });
 };
