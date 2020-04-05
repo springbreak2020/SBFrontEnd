@@ -1,7 +1,13 @@
 import React, { useEffect } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
-import { getIncome } from "../../actions/generalActions";
+import {
+  getIncome,
+  getBudget,
+  getDebt,
+  getSavings,
+  getNotes,
+} from "../../actions/generalActions";
 import "./Dashboard.css";
 
 export const Dashboard = () => {
@@ -10,6 +16,10 @@ export const Dashboard = () => {
   console.log("REDUX STATE", state);
   useEffect(() => {
     dispatch(getIncome("rectBGEgEpxsCQNrz"));
+    dispatch(getBudget("recrJpQP74GJKOjMF"));
+    dispatch(getDebt("rec0sZQOdY4TlCRWY"));
+    dispatch(getSavings("rec2M5LQ6nytiqtwo"));
+    dispatch(getNotes("recTl1DQeL2gyKrk4"));
   }, []);
   return (
     <div className="flex-items">
@@ -18,6 +28,12 @@ export const Dashboard = () => {
         <div className="cards">
           <div className="card">
             <h1>Total Budget</h1>
+            <h1>
+              $
+              {state.general.budget.Period_Total
+                ? state.general.budget.Period_Total
+                : 0}
+            </h1>
           </div>
           <div className="card">
             <h1>Income</h1>
@@ -30,9 +46,15 @@ export const Dashboard = () => {
           </div>
           <div className="card">
             <h1>Savings</h1>
+            <h1>
+              ${state.general.savings.amount ? state.general.savings.amount : 0}
+            </h1>
           </div>
           <div className="card">
             <h1>Total Debt</h1>
+            <h1>
+              ${state.general.debt.amount ? state.general.debt.amount : 0}
+            </h1>
           </div>
         </div>
       </div>

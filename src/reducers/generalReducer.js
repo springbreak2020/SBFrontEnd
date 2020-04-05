@@ -74,14 +74,18 @@ const initialState = {
     Expense_Value: "",
     Period_Balance: "",
   },
-  budget: {},
-  savings: {},
-  debt: {},
-  notes: {},
+  budget: {
+    Budget_Period: "",
+    Period_Total: "",
+    Income_Total: "",
+    Expense_total: "",
+  },
+  savings: { amount: "", location: "", type: "" },
+  debt: { amount: "", type: "" },
+  notes: { note_body: "" },
 };
 
 export default (state = initialState, action) => {
-  console.log("ACTION", action);
   switch (action.type) {
     case GET_INCOME_START:
       return {
@@ -144,7 +148,6 @@ export default (state = initialState, action) => {
         error: action.payload,
       };
     case GET_INCOME_SUCCESS:
-      console.log("ACTION PAYLOAD", action.payload);
       return {
         ...state,
         isfetching: false,
@@ -158,6 +161,52 @@ export default (state = initialState, action) => {
           Income_Value: action.payload.fields["Income Value"],
           Expense_Value: action.payload.fields["Expense Value"],
           Period_Balance: action.payload.fields["Period Balance"],
+        },
+        error: "",
+      };
+    case GET_BUDGET_SUCCESS:
+      return {
+        ...state,
+        isfetching: false,
+        budget: {
+          ...state.budget,
+          Budget_Period: action.payload.data.fields["Budget Period"],
+          Period_Total: action.payload.data.fields["Period Total"],
+          Income_Total: action.payload.data.fields["Income Total"],
+          Expense_total: action.payload.data.fields["Expense total"],
+        },
+        error: "",
+      };
+    case GET_DEBT_SUCCESS:
+      return {
+        ...state,
+        isfetching: false,
+        debt: {
+          ...state.debt,
+          amount: action.payload.data.fields.amount,
+          type: action.payload.data.fields.type,
+        },
+        error: "",
+      };
+    case GET_SAVINGS_SUCCESS:
+      return {
+        ...state,
+        isfetching: false,
+        savings: {
+          ...state.savings,
+          amount: action.payload.data.fields.amount,
+          location: action.payload.data.fields.location,
+          type: action.payload.data.fields.type,
+        },
+        error: "",
+      };
+    case GET_NOTES_SUCCESS:
+      return {
+        ...state,
+        isfetching: false,
+        notes: {
+          ...state.notes,
+          note_body: action.payload.data.fields.note_body,
         },
         error: "",
       };

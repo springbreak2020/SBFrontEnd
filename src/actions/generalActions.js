@@ -74,7 +74,6 @@ export const getIncome = (user) => (dispatch) => {
         type: GET_INCOME_SUCCESS,
         payload: res.data,
       });
-      console.log("RESPONSE FROM AIRTABLE", res.data);
     })
     .catch((err) => {
       console.log("getIncome ERR", err);
