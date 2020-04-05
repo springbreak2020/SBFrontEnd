@@ -1,6 +1,6 @@
 import React from "react";
 
-import Sidebar from "../sidebar/Sidebar";
+// import Sidebar from "../sidebar/Sidebar";
 import NotesCard from "../notes/NotesCard";
 
 import "./dashboard.css";
@@ -8,7 +8,7 @@ import "./dashboard.css";
 export const Dashboard = () => {
   return (
     <div className="dashboard">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <NotesCard />
     </div>
   );

@@ -13,6 +13,8 @@ import { NotesAdd } from "../notes/NotesAdd";
 import { NotesEditDelete } from "../notes/NotesEditDelete";
 import { Dashboard } from "../dashboard/Dashboard";
 import { DebtCard } from "../debt/DebtCard";
+import { IncomeExpenseCard } from "../incomeExpense/IncomeExpenseCard";
+import { SavingsCard } from "../savings/SavingsCard";
 
 export const Routes = () => {
   return (
@@ -25,6 +27,7 @@ export const Routes = () => {
       <Route
         path="/IncomeExpenseEditDelete"
         component={IncomeExpenseEditDelete}
+
       />
       <Route path="/Budgets" component={Budgets} />
       <Route path="/SavingsAdd" component={SavingsAdd} />
@@ -34,6 +37,8 @@ export const Routes = () => {
       <Route path="/NotesAdd" component={NotesAdd} />
       <Route path="/NotesEditDelete" component={NotesEditDelete} />
       <Route path="/DebtCard" component={DebtCard} />
+      <Route path="/IncomeExpenseCard" component={IncomeExpenseCard} />
+      <Route path="/SavingsCard" component={SavingsCard} />
     </>
   );
 };

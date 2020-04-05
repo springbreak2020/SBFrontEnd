@@ -14,7 +14,7 @@ const Sidebar = (props) => {
     props.history.push("/incomeexpensecard");
   };
   const toNotes = () => {
-    props.history.push("/notescard");
+    props.history.push("/dashboard");
   };
   const toSavings = () => {
     props.history.push("/savingscard");
