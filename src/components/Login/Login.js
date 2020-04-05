@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { Header } from "../Header/Header";
 
-export const Login = props => {
+export const Login = (props) => {
   const [login, setLogin] = useState();
   const toDashboard = () => {
     props.history.push("/dashboard");
@@ -15,9 +15,6 @@ export const Login = props => {
   if (login === "true") {
     toDashboard();
   }
-
-  console.log("Login", login);
-  console.log("Props", props);
 
   return (
     <>

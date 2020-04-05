@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withRouter } from "react-router-dom";
 
-const Sidebar = props => {
+const Sidebar = (props) => {
   const toBudget = () => {
     props.history.push("/budgets");
   };
@@ -23,7 +23,6 @@ const Sidebar = props => {
     localStorage.setItem("token", "false");
     props.history.push("/");
   };
-  console.log(props);
   return (
     <div className="sidebar">
       <div className="icons">
