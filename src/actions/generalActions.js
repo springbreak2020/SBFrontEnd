@@ -1,4 +1,3 @@
-import axios from "axios";
 import airtableAuth from "../components/utils/airtableAuth";
 import {
   GET_INCOME_START,
@@ -292,5 +291,80 @@ export const updateNotes = (data) => (dispatch) => {
     .catch((err) => {
       console.log("updateNotes ERR", err);
       dispatch({ type: UPDATE_NOTES_FAILURE });
+    });
+};
+
+// Delete
+export const deleteIncome = (records) => (dispatch) => {
+  dispatch({ type: DELETE_INCOME_START });
+  airtableAuth()
+    .delete(
+      `https://api.airtable.com/v0/appcaKbHDurIj9YWs/Income%20%26%20Expenses?records[]=${records}`
+    )
+    .then((res) => {
+      dispatch({ type: DELETE_INCOME_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("deleteIncome ERR", err);
+      dispatch({ type: DELETE_INCOME_FAILURE });
+    });
+};
+
+export const deleteBudget = (records) => (dispatch) => {
+  dispatch({ type: DELETE_BUDGET_START });
+  airtableAuth()
+    .delete(
+      `https://api.airtable.com/v0/appcaKbHDurIj9YWs/Budgets?records[]=${records}`
+    )
+    .then((res) => {
+      dispatch({ type: DELETE_BUDGET_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("deleteBudget ERR", err);
+      dispatch({ type: DELETE_BUDGET_FAILURE });
+    });
+};
+
+export const deleteSavings = (records) => (dispatch) => {
+  dispatch({ type: DELETE_SAVINGS_START });
+  airtableAuth()
+    .delete(
+      `https://api.airtable.com/v0/appcaKbHDurIj9YWs/Savings?records[]=${records}`
+    )
+    .then((res) => {
+      dispatch({ type: DELETE_SAVINGS_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("deleteSavings ERR", err);
+      dispatch({ type: DELETE_SAVINGS_FAILURE });
+    });
+};
+
+export const deleteDebt = (records) => (dispatch) => {
+  dispatch({ type: DELETE_DEBT_START });
+  airtableAuth()
+    .delete(
+      `https://api.airtable.com/v0/appcaKbHDurIj9YWs/Debt?records[]=${records}`
+    )
+    .then((res) => {
+      dispatch({ type: DELETE_DEBT_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("deleteDebt ERR", err);
+      dispatch({ type: DELETE_DEBT_FAILURE });
+    });
+};
+export const deleteNotes = (records) => (dispatch) => {
+  dispatch({ type: DELETE_NOTES_START });
+  airtableAuth()
+    .delete(
+      `https://api.airtable.com/v0/appcaKbHDurIj9YWs/Notes?records[]=${records}`
+    )
+    .then((res) => {
+      dispatch({ type: DELETE_NOTES_SUCCESS });
+    })
+    .catch((err) => {
+      console.log("deleteNotes ERR", err);
+      dispatch({ type: DELETE_NOTES_FAILURE });
     });
 };
