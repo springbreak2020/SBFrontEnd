@@ -4,6 +4,9 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { withRouter } from "react-router-dom";
 
 const Sidebar = (props) => {
+  const toDashboard = () => {
+    props.history.push("/dashboard");
+  };
   const toBudget = () => {
     props.history.push("/budgets");
   };
@@ -26,6 +29,9 @@ const Sidebar = (props) => {
   return (
     <div className="sidebar">
       <div className="icons">
+        <Tooltip title="Dashboard" placement="right">
+          <i className="fas fa-columns" onClick={toDashboard} />
+        </Tooltip>
         <Tooltip title="Budget" placement="right">
           <i className="fas fa-wallet" onClick={toBudget} />
         </Tooltip>
