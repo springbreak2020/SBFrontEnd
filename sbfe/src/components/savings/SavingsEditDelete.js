@@ -4,9 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import TextField from "@material-ui/core/TextField";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import CurrencyTextField from "@unicef/material-ui-currency-textfield";
 import Button from "@material-ui/core/Button";
@@ -96,7 +93,7 @@ export const SavingsEditDelete = (props) => {
             id="filled-basic"
             label="Anything you'd like to record about this?"
             variant="filled"
-            fullWidth
+            multiline
             className={classes.input}
             onChange={(e, value) => setValue(value)}
           />
