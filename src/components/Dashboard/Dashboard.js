@@ -9,7 +9,7 @@ export const Dashboard = () => {
   const dispatch = useDispatch();
   console.log("REDUX STATE", state);
   useEffect(() => {
-    dispatch(getIncome("recpIjGF4N9Qm3D3I"));
+    dispatch(getIncome("rectBGEgEpxsCQNrz"));
   }, []);
   return (
     <div className="dashboard">

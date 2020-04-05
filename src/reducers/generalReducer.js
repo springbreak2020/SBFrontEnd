@@ -66,22 +66,13 @@ const initialState = {
   error: null,
   income: {
     id: "",
-    size: "",
-    url: "",
-    type: "",
-    filename: "",
-    thumbnails: {
-      small: {
-        url: "",
-        width: "",
-        height: "",
-      },
-      large: {
-        url: "",
-        width: "",
-        height: "",
-      },
-    },
+    Category: "",
+    Type: "",
+    Amount: "",
+    Value: "",
+    Income_Value: "",
+    Expense_Value: "",
+    Period_Balance: "",
   },
   budget: {},
   savings: {},
@@ -153,31 +144,22 @@ export default (state = initialState, action) => {
         error: action.payload,
       };
     case GET_INCOME_SUCCESS:
-      console.log("ACTION PAYLOAD", action);
+      console.log("ACTION PAYLOAD", action.payload);
       return {
         ...state,
-        // isfetching: false,
-        // income: {
-        //   ...state.income,
-        //   id: "action.payload",
-        //   size: action.payload.size,
-        //   url: action.payload.url,
-        //   type: action.payload.type,
-        //   filename: action.payload.filename,
-        //   thumbnails: {
-        //     small: {
-        //       url: action.payload.thumbnails.small.url,
-        //       width: action.payload.thumbnails.small.width,
-        //       height: action.payload.thumbnails.small.height,
-        //     },
-        //     large: {
-        //       url: action.payload.thumbnails.large.url,
-        //       width: action.payload.thumbnails.large.width,
-        //       height: action.payload.thumbnails.large.height,
-        //     },
-        //   },
-        // },
-        // error: "",
+        isfetching: false,
+        income: {
+          ...state.income,
+          id: action.payload.id,
+          Category: action.payload.fields.Category,
+          Type: action.payload.fields.Type,
+          Amount: action.payload.fields.Amount,
+          Value: action.payload.fields.Value,
+          Income_Value: action.payload.fields["Income Value"],
+          Expense_Value: action.payload.fields["Expense Value"],
+          Period_Balance: action.payload.fields["Period Balance"],
+        },
+        error: "",
       };
     default:
       return state;
