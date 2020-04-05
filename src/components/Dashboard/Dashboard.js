@@ -12,8 +12,30 @@ export const Dashboard = () => {
     dispatch(getIncome("rectBGEgEpxsCQNrz"));
   }, []);
   return (
-    <div className="dashboard">
+    <div className="flex-items">
       <Sidebar />
+      <div className="dashboard page">
+        <div className="cards">
+          <div className="card">
+            <h1>Total Budget</h1>
+          </div>
+          <div className="card">
+            <h1>Income</h1>
+            <h1>
+              $
+              {state.general.income.Income_Value
+                ? state.general.income.Income_Value
+                : 0}
+            </h1>
+          </div>
+          <div className="card">
+            <h1>Savings</h1>
+          </div>
+          <div className="card">
+            <h1>Total Debt</h1>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

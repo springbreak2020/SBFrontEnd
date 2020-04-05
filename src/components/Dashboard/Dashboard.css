@@ -1,3 +1,16 @@
-.dashboard {
+.cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
 }
