@@ -14,6 +14,10 @@
   justify-content: space-around !important;
 }
 
+.selected {
+  color: #63e6be;
+}
+
 .icons i:hover {
   cursor: pointer;
   color: #757e7d;
